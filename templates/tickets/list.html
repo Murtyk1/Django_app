@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Цены на авиабилеты</title>
+</head>
+<body>
+    <h1>Авиабилеты</h1>
+    <ul>
+        {% for ticket in tickets %}
+        <li>
+            {{ ticket.origin }} → {{ ticket.destination }} 
+            ({{ ticket.departure_date }}) - {{ ticket.price }} руб. 
+            [{{ ticket.airline }}]
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
